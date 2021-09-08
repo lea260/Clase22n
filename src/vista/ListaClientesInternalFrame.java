@@ -155,7 +155,7 @@ public class ListaClientesInternalFrame extends JInternalFrame {
 			// System.out.println(i);
 			tablaCLientes.getColumnModel().getColumn(i).setCellRenderer(new GestionCeldas02("texto"));
 		}
-		tablaCLientes.getColumnModel().getColumn(Utilidades.SALDO).setCellRenderer(new GestionCeldas02("numerico"));
+		
 
 		// se recorre y asigna el resto de celdas que serian las que almacenen datos de
 		// tipo texto
@@ -167,7 +167,7 @@ public class ListaClientesInternalFrame extends JInternalFrame {
 		tablaCLientes.getColumnModel().getColumn(Utilidades.ID).setPreferredWidth(100);// documento
 		tablaCLientes.getColumnModel().getColumn(Utilidades.NOMBRE).setPreferredWidth(200);// nombre
 		tablaCLientes.getColumnModel().getColumn(Utilidades.EDAD).setPreferredWidth(200);// direccion
-		tablaCLientes.getColumnModel().getColumn(Utilidades.SALDO).setPreferredWidth(100);// direccion
+		
 
 		// personaliza el encabezado
 		JTableHeader jtableHeader = tablaCLientes.getTableHeader();
