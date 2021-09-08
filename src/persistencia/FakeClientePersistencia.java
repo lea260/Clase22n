@@ -12,7 +12,10 @@ public class FakeClientePersistencia implements IPersonaCliente {
 	@Override
 	public ArrayList<ClienteEntidad> obternerListaClientes() {
 		// TODO Auto-generated method stub
-		return null;
+		// TODO Auto-generated method stub
+		Singleton singleton = Singleton.getInstancia();
+		ArrayList<ClienteEntidad> lista = singleton.listarPersonas();
+		return lista;		
 	}
 
 	@Override
