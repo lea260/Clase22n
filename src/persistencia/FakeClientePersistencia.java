@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import entidades.ClienteEntidad;
-import entidades.PersonaEntidad;
+
 import vista.*;
 
 public class FakeClientePersistencia implements IPersonaCliente {
@@ -25,6 +25,12 @@ public class FakeClientePersistencia implements IPersonaCliente {
 	public boolean eliminarCliente() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public int modificarCliente() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	/*@Override

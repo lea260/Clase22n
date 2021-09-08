@@ -3,7 +3,7 @@ package persistencia;
 import java.util.ArrayList;
 
 import entidades.ClienteEntidad;
-import entidades.PersonaEntidad;
+
 
 public interface IPersonaCliente {
 	ArrayList<ClienteEntidad> obternerListaClientes();
@@ -11,4 +11,6 @@ public interface IPersonaCliente {
 	int agregarCliente();
 
 	boolean eliminarCliente();
+
+	int modificarCliente();
 }
