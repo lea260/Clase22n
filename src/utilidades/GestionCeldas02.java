@@ -75,8 +75,16 @@ public class GestionCeldas02 extends DefaultTableCellRenderer {
 			this.setBackground(colorFondoActiva);
 		}
 		// le asigno el valor
-		this.setText((String) value);
-
+		this.setText((String) value);			
+		this.setForeground(new Color(0, 0, 0));
+		if (column == 2) {
+			double valor = Double.parseDouble((String) value);
+			if (valor>=100) {
+				this.setForeground(new Color(0, 255, 0));
+			} else {
+				this.setForeground(new Color(0, 0, 255));				
+			}
+		}
 		this.setFont(normal);
 
 		if (tipo.equals("texto")) {

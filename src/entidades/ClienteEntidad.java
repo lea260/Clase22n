@@ -1,5 +1,5 @@
 package entidades;
-
+ 
 public class ClienteEntidad {
 	private int id;
 	private String nombre;
