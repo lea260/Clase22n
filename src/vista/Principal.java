@@ -4,6 +4,10 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
+/**
+ * @author lcalv
+ *
+ */
 public class Principal {
 
 	private JFrame frame;

@@ -23,8 +23,9 @@ import utilidades.Utilidades;
 public class ListaClientesInternalFrame extends JInternalFrame {
 	private JTable tablaCLientes;
 	private ArrayList<ClienteEntidad> listaClientes;
-	JScrollPane scrollPane;
-	public ModeloTabla modelo;
+	private JScrollPane scrollPane;
+	private ModeloTabla modelo;
+	private Empresa empresa;
 
 	/**
 	 * Launch the application.
@@ -50,19 +51,19 @@ public class ListaClientesInternalFrame extends JInternalFrame {
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
-		setTitle("Lista Persona");
-		setBounds(100, 100, 873, 800);
+		setTitle("Lista Clientes");
+		setBounds(100, 100, 885, 592);
 		getContentPane().setLayout(null);
 		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(37, 63, 759, 400);
+		scrollPane.setBounds(37, 63, 759, 303);
 		getContentPane().add(scrollPane);
 		
 		tablaCLientes = new JTable();
 		scrollPane.setViewportView(tablaCLientes);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(37, 509, 759, 100);
+		panel.setBounds(37, 427, 759, 100);
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -75,7 +76,7 @@ public class ListaClientesInternalFrame extends JInternalFrame {
 	
 	private void construirTabla() {
 		// llamamos
-		Empresa empresa = new Empresa();
+		empresa = new Empresa();
 		listaClientes   = empresa.mostrarDatosClientes();
 		// utiliza el metodo compareTo implementado en personaEntidad
 		//listaPersonas.sort(null);
