@@ -38,14 +38,15 @@ public class ClienteEntidad implements Comparable<ClienteEntidad> {
 
 	@Override
 	public int compareTo(ClienteEntidad cli) {
-		// TODO Auto-generated method stub
-		int retornar = 0;
-		if (this.id < cli.id) {
-			retornar = -1;
-		} else if (this.id > cli.id) {
-			retornar = -1;
+		int valor = 0;
+		if (this.getId() < cli.getId()) {
+			valor = -1;
+		} else if (this.getId() > cli.getId()) {
+			valor = 1;
+		} else {
+			valor = 0;
 		}
-		return retornar;
+		return valor;
 	}
 
 }
