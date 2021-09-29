@@ -1,6 +1,6 @@
 package entidades;
  
-public class ClienteEntidad {
+public class ClienteEntidad implements Comparable<ClienteEntidad> {
 	private int id;
 	private String nombre;
 	private int edad;
@@ -27,6 +27,11 @@ public class ClienteEntidad {
 	}
 	public void setEdad(int edad) {
 		this.edad = edad;
+	}
+	@Override
+	public int compareTo(ClienteEntidad o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 		
 	
