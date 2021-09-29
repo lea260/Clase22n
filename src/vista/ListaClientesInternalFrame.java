@@ -79,7 +79,7 @@ public class ListaClientesInternalFrame extends JInternalFrame {
 		empresa = new Empresa();
 		listaClientes   = empresa.mostrarDatosClientes();
 		// utiliza el metodo compareTo implementado en personaEntidad
-		//listaPersonas.sort(null);
+		listaPersonas.sort(null);
 		//listaPersonas.sort(new OrdenarPersonaEdad());
 		//listaPersonas.sort(new OrdenarPersonaEdadId());
 		/*listaPersonas.sort((p1, p2) -> {
