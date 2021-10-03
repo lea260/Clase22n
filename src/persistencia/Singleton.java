@@ -16,7 +16,7 @@ public class Singleton {
 		if (instancia == null) {
 			instancia = new Singleton();
 			instancia.listaClientes = new ArrayList<ClienteEntidad>();			
-			instancia.listaClientes.add(new ClienteEntidad(15, "Juan", 25));
+			instancia.listaClientes.add(new ClienteEntidad(21, "Juan", 25));
 			instancia.listaClientes.add(new ClienteEntidad(105, "El reja", 105));
 			instancia.listaClientes.add(new ClienteEntidad(15, "el flecha", 44));
 			instancia.listaClientes.add(new ClienteEntidad(5, "juncho hebio", 17));
@@ -29,6 +29,10 @@ public class Singleton {
 
 	public ArrayList<ClienteEntidad> listarPersonas() {
 		return listaClientes;
-		
+	}
+	
+	public int agregarCliente(ClienteEntidad cli) {
+		listaClientes.add(cli);
+		return cli.getId();
 	}
 }

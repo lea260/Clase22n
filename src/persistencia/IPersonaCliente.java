@@ -8,9 +8,9 @@ import entidades.ClienteEntidad;
 public interface IPersonaCliente {
 	ArrayList<ClienteEntidad> obternerListaClientes();
 
-	int agregarCliente();
+	int agregarCliente(ClienteEntidad cli);
 
-	boolean eliminarCliente();
+	boolean eliminarCliente(int id);
 
-	int modificarCliente();
+	boolean editarCliente(ClienteEntidad cli);
 }

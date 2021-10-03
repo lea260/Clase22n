@@ -10,7 +10,7 @@ public class ClienteEntidad implements Comparable<ClienteEntidad> {
 		this.id = id;
 		this.nombre = nombre;
 		this.edad = edad;
-	}
+	} 
 
 	public int getId() {
 		return id;

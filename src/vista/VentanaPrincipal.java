@@ -20,11 +20,16 @@ import javax.swing.JToolBar;
 import javax.swing.KeyStroke;
 import javax.swing.border.EmptyBorder;
 
+import entidades.ClienteEntidad;
+
 public class VentanaPrincipal extends JFrame {
 
 	private JPanel contentPane;
 	private JDesktopPane desktopPane;
 	private ListaClientesInternalFrame listaClientesInternalFrame;
+	private CrearClienteSV crearClienteSV;
+	private EditarClienteSV editarClienteSV;
+	
 
 	/**
 	 * Launch the application.
@@ -106,7 +111,7 @@ public class VentanaPrincipal extends JFrame {
 		 * 
 		 */
 		if (listaClientesInternalFrame == null || listaClientesInternalFrame.isClosed()) {
-			listaClientesInternalFrame = new ListaClientesInternalFrame();
+			listaClientesInternalFrame = new ListaClientesInternalFrame(this);
 			listaClientesInternalFrame.setVisible(true);
 			Dimension tfDimension = listaClientesInternalFrame.getSize();
 			int anchoDP = desktopPane.getWidth();
@@ -114,6 +119,44 @@ public class VentanaPrincipal extends JFrame {
 			float margen = (anchoDP - anchoPersona) / 2;
 			listaClientesInternalFrame.setLocation((int) margen, 0);
 			desktopPane.add(listaClientesInternalFrame);
+		}
+	}
+	
+	public void verFormularioCrearCliente() {
+		// evalucaion en cirito corto de los condicional
+		/*
+		 * personaFormularioFrame.isClosed() va a ejecutarse si falla la primera
+		 * condicion falla entonces personaFormularioFrame != null (cierto)
+		 * 
+		 */
+		if (crearClienteSV == null || crearClienteSV.isClosed()) {
+			crearClienteSV = new CrearClienteSV(this);
+			crearClienteSV.setVisible(true);
+			Dimension tfDimension = crearClienteSV.getSize();
+			int anchoDP = desktopPane.getWidth();
+			int anchoPersona = tfDimension.width;
+			float margen = (anchoDP - anchoPersona) / 2;
+			crearClienteSV.setLocation((int) margen, 0);
+			desktopPane.add(crearClienteSV);
+		}
+	}
+	
+	public void verFormularioEditarCliente(ClienteEntidad cli) {
+		// evalucaion en cirito corto de los condicional
+		/*
+		 * personaFormularioFrame.isClosed() va a ejecutarse si falla la primera
+		 * condicion falla entonces personaFormularioFrame != null (cierto)
+		 * 
+		 */
+		if (editarClienteSV == null || editarClienteSV.isClosed()) {
+			editarClienteSV = new EditarClienteSV(this, cli);
+			editarClienteSV.setVisible(true);
+			Dimension tfDimension = editarClienteSV.getSize();
+			int anchoDP = desktopPane.getWidth();
+			int anchoPersona = tfDimension.width;
+			float margen = (anchoDP - anchoPersona) / 2;
+			editarClienteSV.setLocation((int) margen, 0);
+			desktopPane.add(editarClienteSV);
 		}
 	}
 }

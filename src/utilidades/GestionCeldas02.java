@@ -77,10 +77,10 @@ public class GestionCeldas02 extends DefaultTableCellRenderer {
 		// le asigno el valor
 		this.setText((String) value);			
 		this.setForeground(new Color(0, 0, 0));
-		if (column == 2) {
+		if (column == 0) {
 			double valor = Double.parseDouble((String) value);
-			if (valor>=100) {
-				this.setForeground(new Color(0, 255, 0));
+			if (valor>=7) {
+				this.setForeground(new Color(0, 0, 255));
 			} else {
 				this.setForeground(new Color(0, 0, 255));				
 			}
