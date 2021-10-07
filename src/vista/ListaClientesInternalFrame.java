@@ -41,6 +41,7 @@ public class ListaClientesInternalFrame extends JInternalFrame implements MouseL
 	 * Create the frame.
 	 */
 	public ListaClientesInternalFrame(VentanaPrincipal vp) {
+		Utilidades.filaSeleccionada=-1;
 		this.vp = vp;
 		setResizable(true);
 		setMaximizable(true);
@@ -202,6 +203,7 @@ public class ListaClientesInternalFrame extends JInternalFrame implements MouseL
 		// TODO Auto-generated method stub
 		this.vp.verFormularioCrearCliente();
 		this.dispose();
+		Utilidades.filaSeleccionada=-1;
 	}
 
 	protected void editarCliente() {
@@ -215,6 +217,7 @@ public class ListaClientesInternalFrame extends JInternalFrame implements MouseL
 			JOptionPane.showMessageDialog(null, info);
 			this.vp.verFormularioEditarCliente(cli);
 			this.dispose();
+			Utilidades.filaSeleccionada=-1;
 		}
 	}
 
@@ -229,7 +232,8 @@ public class ListaClientesInternalFrame extends JInternalFrame implements MouseL
 				Cliente cliente = new Cliente(cli.getId(), cli.getEdad(), cli.getNombre());
 				cliente.eliminar();
 				this.dispose();
-				this.vp.verFormularioListaClientes();			
+				this.vp.verFormularioListaClientes();	
+				Utilidades.filaSeleccionada=-1;
 			}
 		}
 	}
